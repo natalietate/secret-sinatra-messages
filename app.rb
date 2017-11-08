@@ -14,7 +14,8 @@ end
 
 # creating messages route
 post '/messages' do
-  # TODO
+  message = Message.create(title: params[:title], body: params[:body])
+  redirect "/messages/#{message.id}"
 end
 
 # new messages route

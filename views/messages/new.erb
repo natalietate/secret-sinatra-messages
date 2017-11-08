@@ -1,3 +1,16 @@
 <h1>Write your secret message...</h1>
 
 <a href="/">Take me back</a>
+<br>
+
+<form action="/messages" method="post">
+  <label>Title</label><br>
+  <input type="text" name="title">
+  <br>
+
+  <label>Body</label><br>
+  <textarea name="body" rows="10" cols="50"></textarea>
+  <br>
+
+  <input type="submit" value="Create Message">
+</form>

@@ -4,7 +4,7 @@
 <br>
 
 <div class="container">
-  <% @messages.each do |message| %>
+  <% @messages.reverse_each do |message| %>
     <div class="message">
       <p>
         <a href="/messages/<%= message.id %>"><%= message.title %></a>
