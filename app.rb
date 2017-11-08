@@ -28,3 +28,13 @@ get '/messages/:id' do
   @message = Message.find_by_id(params[:id])
   erb :'messages/show'
 end
+
+# TODO: Ability to delete post
+# destroy
+delete '/messages/:id' do
+  message = Message.find_by_id(params[:id])
+  message.destroy
+  redirect '/'
+end
+
+# TODO: Ability to edit post
