@@ -8,6 +8,7 @@ set :database, "sqlite3:development.sqlite3"
 
 # messages index route
 get '/' do
+  @messages = Message.all
   erb :index
 end
 
@@ -23,5 +24,6 @@ end
 
 # show messages route
 get '/messages/:id' do
+  @message = Message.find_by_id(params[:id])
   erb :'messages/show'
 end

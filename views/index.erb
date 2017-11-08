@@ -1,3 +1,14 @@
 <h1>Secret Messages</h1>
 
 <a href="/messages/new">Leave your message</a>
+<br>
+
+<div class="container">
+  <% @messages.each do |message| %>
+    <div class="message">
+      <p>
+        <a href="/messages/<%= message.id %>"><%= message.title %></a>
+      </p>
+    </div>
+  <% end %>
+</div>
