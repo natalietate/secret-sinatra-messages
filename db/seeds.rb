@@ -1,6 +1,8 @@
-# Put data creation code here
-# Initiate the data by running 'rake db:seed'
-# in the command line after running migrations (rake db:migrate)
+require 'faker'
 
-# e.g.
-# User.create(f_name: 'Bobby', l_name: 'McBobberson')
+20.times do
+  Message.create(
+    title: Faker::Food.dish,
+    body: Faker::Seinfeld.quote
+  )
+end
