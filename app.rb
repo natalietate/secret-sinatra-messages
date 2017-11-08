@@ -6,17 +6,22 @@ require './models'
 # Database configuration
 set :database, "sqlite3:development.sqlite3"
 
-# Define routes below
+# messages index route
 get '/' do
   erb :index
 end
 
-# Providing model information to the view
-# requires an instance variable (prefixing with the '@' symbol)
+# creating messages route
+post '/messages' do
+  # TODO
+end
 
-# Example 'User' index route
+# new messages route
+get '/messages/new' do
+  erb :'messages/new'
+end
 
-# get '/users' do
-#   @users = User.all
-#   erb :users
-# end
+# show messages route
+get '/messages/:id' do
+  erb :'messages/show'
+end
